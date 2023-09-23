@@ -2417,14 +2417,19 @@ textarea:focus, input:focus{  /* removes the blue border that appears when the e
 
 .sign-in-form input[type=submit] {
     margin-top: 10px;
+    background-color: #144a97;
+    transition: transform .2s;
 }
 
 .sign-up-form input[type=submit] {
     margin-top: 30px;
+    background-color: #144a97;
+    transition: transform .2s;
 }
 
 .sign-in-form input[type=submit]:hover, .sign-up-form input[type=submit]:hover {
-    background-color: #FF4500;
+    background-color: #144a97;
+    transform: scale(1.2);
 }
 
 .sign-in-redirect, .sign-up-redirect, .sign-up-tos {
@@ -2444,7 +2449,7 @@ textarea:focus, input:focus{  /* removes the blue border that appears when the e
 
 .sign-in-redirect a, .sign-in-redirect a:hover, .sign-up-redirect a, .sign-up-redirect a:hover {
     margin-left: 10px;
-    color: #FF6347;
+    color: #144a97;
     text-decoration: none;
 }
 

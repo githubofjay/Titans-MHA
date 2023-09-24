@@ -195,28 +195,52 @@ const questions = [
 
 
 $(document).ready(function(){
+    questions.forEach(function(question){
+        let str = `
+        <form class="form" id="form-${question.questionNumber}">
+        <h2 id='question'>Question ${question.questionNumber}</h2>
+        <p>${question.title}</p>
+        <input type="radio" id="op1" name="op" value="0">
+        <label for="op1">${question.options[0]}</label><br>
+        <input type="radio" id="op2" name="op" value="1">
+        <label for="op2">${question.options[1]}</label><br>
+        <input type="radio" id="op3" name="op" value="2">
+        <label for="op2">${question.options[2]}</label><br>
+        <input type="submit" name="submit" id="submit" value = 'Submit' class = "submit"/>
+    </form>`;
+
+    document.querySelector(".question-card").innerHTML += str;
+
+    })
+
+    let str = `<form class="form" id="form-request">
+        <p>Congratulations on Completion</p>
+        <input type="submit" name="submit" value = 'Submit' class = "submit"/>
+</form>`;
+document.querySelector(".question-card").innerHTML += str;
+
     $("#form-1").submit(function(e){
+        e.preventDefault();
         let selected = document.querySelector('#form-1 input[name="op"]:checked').value;
         questions[0].answer = selected;
-        alert(questions[0].answer)
         $(this).hide();
         $("#form-2").show();
         return false;
       });
 
       $("#form-2").submit(function(e){
+        e.preventDefault();
         let selected = document.querySelector('#form-2 input[name="op"]:checked').value;
         questions[1].answer = selected;
-        alert(questions[1].answer)
         $(this).hide();
         $("#form-3").show();
         return false;
       });
 
       $("#form-3").submit(function(e){
+        e.preventDefault();
         let selected = document.querySelector('#form-3 input[name="op"]:checked').value;
         questions[2].answer = selected;
-        alert(questions[2].answer)
         $(this).hide();
         $("#form-4").show();
         return false;
@@ -225,7 +249,6 @@ $(document).ready(function(){
       $("#form-4").submit(function(e){
         let selected = document.querySelector('#form-4 input[name="op"]:checked').value;
         questions[3].answer = selected;
-        alert(questions[3].answer)
         $(this).hide();
         $("#form-5").show();
         return false;
@@ -234,7 +257,6 @@ $(document).ready(function(){
       $("#form-5").submit(function(e){
         let selected = document.querySelector('#form-5 input[name="op"]:checked').value;
         questions[4].answer = selected;
-        alert(questions[4].answer)
         $(this).hide();
         $("#form-6").show();
         return false;
@@ -243,7 +265,6 @@ $(document).ready(function(){
       $("#form-6").submit(function(e){
         let selected = document.querySelector('#form-6 input[name="op"]:checked').value;
         questions[5].answer = selected;
-        alert(questions[5].answer)
         $(this).hide();
         $("#form-7").show();
         return false;
@@ -252,7 +273,6 @@ $(document).ready(function(){
       $("#form-7").submit(function(e){
         let selected = document.querySelector('#form-7 input[name="op"]:checked').value;
         questions[6].answer = selected;
-        alert(questions[6].answer)
         $(this).hide();
         $("#form-8").show();
         return false;
@@ -261,7 +281,6 @@ $(document).ready(function(){
       $("#form-8").submit(function(e){
         let selected = document.querySelector('#form-8 input[name="op"]:checked').value;
         questions[7].answer = selected;
-        alert(questions[7].answer)
         $(this).hide();
         $("#form-9").show();
         return false;
@@ -270,7 +289,6 @@ $(document).ready(function(){
       $("#form-9").submit(function(e){
         let selected = document.querySelector('#form-9 input[name="op"]:checked').value;
         questions[8].answer = selected;
-        alert(questions[8].answer)
         $(this).hide();
         $("#form-10").show();
         return false;
@@ -279,7 +297,6 @@ $(document).ready(function(){
       $("#form-10").submit(function(e){
         let selected = document.querySelector('#form-10 input[name="op"]:checked').value;
         questions[9].answer = selected;
-        alert(questions[9].answer)
         $(this).hide();
         $("#form-11").show();
         return false;
@@ -288,7 +305,6 @@ $(document).ready(function(){
       $("#form-11").submit(function(e){
         let selected = document.querySelector('#form-11 input[name="op"]:checked').value;
         questions[10].answer = selected;
-        alert(questions[10].answer)
         $(this).hide();
         $("#form-12").show();
         return false;
@@ -297,7 +313,6 @@ $(document).ready(function(){
       $("#form-12").submit(function(e){
         let selected = document.querySelector('#form-12 input[name="op"]:checked').value;
         questions[11].answer = selected;
-        alert(questions[11].answer)
         $(this).hide();
         $("#form-13").show();
         return false;
@@ -306,7 +321,6 @@ $(document).ready(function(){
       $("#form-13").submit(function(e){
         let selected = document.querySelector('#form-13 input[name="op"]:checked').value;
         questions[12].answer = selected;
-        alert(questions[12].answer)
         $(this).hide();
         $("#form-14").show();
         return false;
@@ -315,7 +329,6 @@ $(document).ready(function(){
       $("#form-14").submit(function(e){
         let selected = document.querySelector('#form-14 input[name="op"]:checked').value;
         questions[13].answer = selected;
-        alert(questions[13].answer)
         $(this).hide();
         $("#form-15").show();
         return false;
@@ -324,7 +337,6 @@ $(document).ready(function(){
       $("#form-15").submit(function(e){
         let selected = document.querySelector('#form-15 input[name="op"]:checked').value;
         questions[14].answer = selected;
-        alert(questions[14].answer)
         $(this).hide();
         $("#form-16").show();
         return false;
@@ -333,7 +345,6 @@ $(document).ready(function(){
       $("#form-16").submit(function(e){
         let selected = document.querySelector('#form-16 input[name="op"]:checked').value;
         questions[15].answer = selected;
-        alert(questions[15].answer)
         $(this).hide();
         $("#form-17").show();
         return false;
@@ -343,16 +354,26 @@ $(document).ready(function(){
         e.preventDefault();
         let selected = document.querySelector('#form-17 input[name="op"]:checked').value;
         questions[16].answer = selected;
-        alert(questions[16].answer);
+        $(this).hide();
+        $("#form-request").show();
+        return false;
+      });
+
+      $("#form-request").submit(function(e){
+        e.preventDefault();
         evaluation();
         return false;
       });
+      
+
+      init();
   });
 
 function init(){
     document.getElementById('form-1').style.display = "unset";
+
 }
-init();
+
 
 
 let countI=0;

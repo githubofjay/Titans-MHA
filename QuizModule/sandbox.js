@@ -5,7 +5,7 @@
 
 const questions = [
     {
-        title : 'Fidgety, unable to sit still',
+        title : 'How often do you feel fidgety and that you are unable to sit still?',
         options : [
             'NEVER', 
             'SOMETIMES', 
@@ -16,7 +16,7 @@ const questions = [
         questionNumber: 1
     },
     {
-        title : 'Feels sad, unhappy',
+        title : 'Feel sad or unhappy?',
         options : [
             'NEVER', 
             'SOMETIMES', 
@@ -27,7 +27,7 @@ const questions = [
         questionNumber: 2
     },
     {
-        title : 'Daydreams too much',
+        title : 'Daydream too much',
         options : [
             'NEVER', 
             'SOMETIMES', 
@@ -38,7 +38,7 @@ const questions = [
         questionNumber: 3
     },
     {
-        title : 'Refuses to share',
+        title : 'Do not like to share',
         options : [
             'NEVER', 
             'SOMETIMES', 
@@ -49,7 +49,7 @@ const questions = [
         questionNumber: 4
     },
     {
-        title : 'Does not understand other people’s feelings',
+        title : 'Have trouble understanding other people’s feelings',
         options : [
             'NEVER', 
             'SOMETIMES', 
@@ -60,7 +60,7 @@ const questions = [
         questionNumber: 5
     },
     {
-        title : 'Feels hopeless',
+        title : 'Feel hopeless',
         options : [
             'NEVER', 
             'SOMETIMES', 
@@ -71,7 +71,7 @@ const questions = [
         questionNumber: 6
     },
     {
-        title : 'Has trouble concentrating',
+        title : 'Have trouble concentrating',
         options : [
             'NEVER', 
             'SOMETIMES', 
@@ -82,7 +82,7 @@ const questions = [
         questionNumber: 7
     },
     {
-        title : 'Fights with other children',
+        title : 'Fight with others',
         options : [
             'NEVER', 
             'SOMETIMES', 
@@ -93,7 +93,7 @@ const questions = [
         questionNumber: 8
     },
     {
-        title : 'Is down on him or herself',
+        title : 'Are down on yourself',
         options : [
             'NEVER', 
             'SOMETIMES', 
@@ -115,7 +115,7 @@ const questions = [
         questionNumber: 10
     },
     {
-        title : 'Seems to be having less fun',
+        title : 'Seem to be having less fun',
         options : [
             'NEVER', 
             'SOMETIMES', 
@@ -126,7 +126,7 @@ const questions = [
         questionNumber: 11
     },
     {
-        title : 'Does not listen to rules',
+        title : 'Do not like to listen to rules',
         options : [
             'NEVER', 
             'SOMETIMES', 
@@ -137,7 +137,7 @@ const questions = [
         questionNumber: 12
     },
     {
-        title : 'Acts as if driven by a motor',
+        title : 'Act impulsively',
         options : [
             'NEVER', 
             'SOMETIMES', 
@@ -148,7 +148,7 @@ const questions = [
         questionNumber: 13
     },
     {
-        title : 'Teases others',
+        title : 'Tease others',
         options : [
             'NEVER', 
             'SOMETIMES', 
@@ -159,7 +159,7 @@ const questions = [
         questionNumber: 14
     },
     {
-        title : 'Worries a lot',
+        title : 'Worry a lot',
         options : [
             'NEVER', 
             'SOMETIMES', 
@@ -408,19 +408,20 @@ let total_count= countA+countI+countE;
 
  if(countA>=5)
  {
-    console.log("child have Enxiety and mood Disorder");
+    console.log("You might have an anxiety or mood Disorder. Anxiety disorder is characterized by excessive ongoing anxietry and worry that is difficult to control and interfere with day-to-day activities. Similarly, mood disorders can be characterized by experiencing mood swings or irritability very often. ");
  }
  if(countI>=7)
  {
-    console.log("ADHD,ADD");
+    console.log("You might have ADHD(Attention deficit hyperactivity Disorder), or ADD(attention deficit disorder) in short. This chronic condition including attention difficulty, hyperactivity and impulsiveness. It can often begin in childhood and persist until adulthood. Treatments can include therapies and some medications");
  }
  if(countI>=7)
  {
-    console.log("Conduct disorder, Oppositional Defiant Disorder adjustment disorder with disturbed conduct or mixed disturbed mood and conduct")
+    console.log("You might have Conduct disorder, Oppositional Defiant Disorder adjustment disorder with disturbed conduct or mixed disturbed mood and conduct. Conduct behavior is diagnosed when children show aggressiveness towards others many times and have a hard time following rules and behaving in a socially acceptable way.")
  }
  if(total_count>=15)
  {
-    console.log("increased likelihood of a behavioral health disorder being present")
+    console.log("There is an increased likelihood of a behavioral health disorder being present. These disorders should be treated early so that you can live a happy and fulfilling life.")
  }
+ 
  }
 

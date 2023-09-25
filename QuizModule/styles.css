@@ -5,6 +5,7 @@ body {
 }
 .form{
     display: none;
+    min-height: 250px;
 }
 #form-request{
     height: 400px;
